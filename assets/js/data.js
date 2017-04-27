@@ -63,6 +63,40 @@ var res = [
   
 
 res.forEach(function(element){cajita.innerHTML += "<li>" + element.title + "</li>";})
-var input = document.getElementById('nuevo').value;
-var arr=[];
+
+function botonFuncional() {
+	var input = document.getElementById('nuevo').value;
+	var informacion = document.getElementsByClassName('anadir-tarea');
+	informacion[0].innerHTML += "<li>" + input + "</li>";
+}
+
+function Identificador(userId, id, title, completed) {
+	this.userId = userId;
+	this.id = id;
+	this.title = title;
+	this.completed = completed;
+
+	this.userId = function(){
+		var usuario = 1;
+		return usuario;
+	}
+
+	this.id = function(){
+		var num = this.id;
+		return num;
+	}
+
+	this.title = function(){
+		var tit = document.getElementsByClassName('anadir-tarea').value;
+		return tit;
+	}
+
+	this.completed = function(){
+		var comp = false;
+		return comp;
+	}
+}
+
+var sumarObjeto = new Identificador(this.userId, this.id, this.title, this.completed);
+res.push(sumarObjeto);
 
