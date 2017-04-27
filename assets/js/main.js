@@ -7,5 +7,9 @@ function Identificador() {
 }
 
 function botonFuncional() {
-	var boton = document.getElementsById('boton');
+	var input = document.getElementById('nuevo').value;
+	var informacion = document.getElementsByClassName('anadir-tarea');
+	informacion[0].innerHTML += "<ul><li>" + input + "</li></ul>";
 }
+
+

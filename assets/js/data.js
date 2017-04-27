@@ -63,3 +63,6 @@ var res = [
   
 
 res.forEach(function(element){cajita.innerHTML += "<li>" + element.title + "</li>";})
+var input = document.getElementById('nuevo').value;
+var arr=[];
+
